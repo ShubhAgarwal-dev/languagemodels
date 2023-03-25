@@ -1,6 +1,7 @@
 from fastapi import FastAPI, File, UploadFile
 from summary import summary_using_t5, generate_qna
 from api_nlp import get_answer
+from tr import translate as trr
 
 app = FastAPI()
 
@@ -35,6 +36,11 @@ async def file_upload(file: UploadFile = File(...)):
         return {"message": "There was an error uploading the file"}
     finally:
         file.file.close()
-
+        
     return {"message": f"Successfully uploaded {file.filename}"}
+
+
+@app.get("/translate/")
+async def translate(text: str = "Hello World"):
+    return trr(text)
 
