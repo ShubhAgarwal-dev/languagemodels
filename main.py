@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, File, UploadFile
 from summary import summary_using_t5, generate_qna
 from api_nlp import get_answer
 
@@ -23,8 +23,18 @@ async def qna(text: str = "Hello World"):
 @app.get("/ans/")
 async def ans(question:str, context:str):
     return get_answer(question, context)
+    
 
+@app.post("/upload/")
+async def file_upload(file: UploadFile = File(...)):
+    try:
+        contents = file.file.read()
+        with open(f"./data/{file.filename}", 'wb') as f:
+            f.write(contents)
+    except Exception:
+        return {"message": "There was an error uploading the file"}
+    finally:
+        file.file.close()
 
-#if __name__ == "__main__":
-#    uvicorn.run(app, host="10.196.28.63", port=8000)
+    return {"message": f"Successfully uploaded {file.filename}"}
 
