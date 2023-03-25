@@ -10,16 +10,16 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World\nWe are ready to rock the world"}
+    return {"message": "Hello World! We are ready to rock the world"}
     
     
 @app.get("/summary/")
-async def summary(text: str = "Hello World"):
+async def summary(text: str = "Paste the text here"):
     return summary_using_t5(text)
 
 
 @app.get("/qna/")
-async def qna(text: str = "Hello World"):
+async def qna(text: str = "Paste the text here"):
     return generate_qna(text)
     
 
@@ -43,6 +43,6 @@ async def file_upload(file: UploadFile = File(...)):
 
 
 @app.get("/translate/")
-async def translate(text: str = "Hello World"):
+async def translate(text: str = "Paste the text here"):
     return trr(text)
 
