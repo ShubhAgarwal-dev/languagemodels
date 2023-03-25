@@ -1,7 +1,9 @@
 from fastapi import FastAPI, File, UploadFile
+
 from summary import summary_using_t5, generate_qna
 from api_nlp import get_answer
 from tr import translate as trr
+from pdfEx import pdfExtract
 
 app = FastAPI()
 
@@ -37,7 +39,7 @@ async def file_upload(file: UploadFile = File(...)):
     finally:
         file.file.close()
         
-    return {"message": f"Successfully uploaded {file.filename}"}
+    return pdfExtract(f"./data/{file.filename}")
 
 
 @app.get("/translate/")
