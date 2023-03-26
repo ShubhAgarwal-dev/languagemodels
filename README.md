@@ -6,8 +6,7 @@ This is the the official **DevHack 4.0** Hackathon Repository. Participants list
 -  Karthik Hegde (210010022)
 -  Shubh Agarwal (210020047)
 
-[Report Link](https://docs.google.com/document/d/1X2Ip_jUD6hoqVXg88Mf6ZKAaGaZh2mznHGZjWrpNxDk/edit?usp=sharing) <br />
-[Sample Research Paper](https://drive.google.com/file/d/1KT31DzDvVDgHAxSjYrNYfeb53NkoiIHM/view?usp=sharing)
+[Report Link](https://docs.google.com/document/d/1X2Ip_jUD6hoqVXg88Mf6ZKAaGaZh2mznHGZjWrpNxDk/edit?usp=sharing)
 
 ## Installation Guide
 
@@ -26,6 +25,7 @@ The replication parts starts from below:
 ```sh
 git clone https://github.com/ShubhAgarwal-dev/languagemodels.git
 cd languagemodels
+mkdir data
 # activate the environment using source ./env/bin/activate, if made
 pip install "fastapi[all]"
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
@@ -45,10 +45,15 @@ python -m nltk.downloader punkt
 pip install protobuf==3.15.8
 ```
 
-For translation Model:
+For Translation Model:
 ```sh
 pip install sentencepiece
 pip install sacremoses
+```
+
+For Question Answering Model:
+```sh
+pip install openai
 ```
 
 For PDF Text-Retriver:
@@ -61,7 +66,7 @@ pip install PyPDF2
 uvicorn main:app --reload
 ```
 
-If you want to run API Server and clinet on different machines connected to the same network,  you can get your IP using `ifconfig`:
+If you want to run API Server and client on different machines connected to the same network,  you can get your IP using `ifconfig`:
 ```sh
 uvicorn --host <YOUR_IP_HERE> main:app --reload
 ```
@@ -69,3 +74,12 @@ uvicorn --host <YOUR_IP_HERE> main:app --reload
 If running the server for the first time, it is going to take a lot of time as a lot of models will be downloaded locally. Good internet connection is recommended. 
 
 After everything is done, you can go to `localhost:8000/docs` or `<YOUR_IP_HERE>:8000/docs` for using the interface.
+
+## Testing the project
+[Sample Research Paper](https://drive.google.com/file/d/1KT31DzDvVDgHAxSjYrNYfeb53NkoiIHM/view?usp=sharing) 
+
+After visiting  `localhost:8000/docs` or `<YOUR_IP_HERE>:8000/docs` you can try any of the listed actions.
+
+## Generatie OPENAI api key
+
+Refer to this  [artile](https://elephas.app/blog/how-to-create-openai-api-keys-cl5c4f21d281431po7k8fgyol0) and place the generated key in `api_nlp.py`.
