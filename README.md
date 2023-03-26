@@ -6,7 +6,8 @@ This is the the official **DevHack 4.0** Hackathon Repository. Participants list
 -  Karthik Hegde (210010022)
 -  Shubh Agarwal (210020047)
 
-[Report Link](https://docs.google.com/document/d/1X2Ip_jUD6hoqVXg88Mf6ZKAaGaZh2mznHGZjWrpNxDk/edit?usp=sharing)
+[Report Link](https://docs.google.com/document/d/1X2Ip_jUD6hoqVXg88Mf6ZKAaGaZh2mznHGZjWrpNxDk/edit?usp=sharing)<br />
+[VIDEO GUIDES](https://drive.google.com/drive/folders/1WbXv24w2ck5Fvc23oPqnhFCj3OHO5UUC?usp=sharing)
 
 ## Installation Guide
 
