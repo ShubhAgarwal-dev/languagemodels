@@ -1,5 +1,5 @@
 import openai
-openai.api_key = "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"
+openai.api_key = "PUT YOUR OWN API"
 
 def get_answer(question:str, context:str):
     prompt = f"question:{question}\ncontext:{context}"
