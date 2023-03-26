@@ -80,6 +80,6 @@ After everything is done, you can go to `localhost:8000/docs` or `<YOUR_IP_HERE>
 
 After visiting  `localhost:8000/docs` or `<YOUR_IP_HERE>:8000/docs` you can try any of the listed actions.
 
-## Generatie OPENAI api key
+## Generate OPENAI api key
 
 Refer to this  [article](https://elephas.app/blog/how-to-create-openai-api-keys-cl5c4f21d281431po7k8fgyol0) and place the generated key in `api_nlp.py`.
