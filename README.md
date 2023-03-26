@@ -82,4 +82,4 @@ After visiting  `localhost:8000/docs` or `<YOUR_IP_HERE>:8000/docs` you can try 
 
 ## Generatie OPENAI api key
 
-Refer to this  [artile](https://elephas.app/blog/how-to-create-openai-api-keys-cl5c4f21d281431po7k8fgyol0) and place the generated key in `api_nlp.py`.
+Refer to this  [article](https://elephas.app/blog/how-to-create-openai-api-keys-cl5c4f21d281431po7k8fgyol0) and place the generated key in `api_nlp.py`.
